@@ -23,6 +23,7 @@
 #include <linux/pinctrl/consumer.h>
 
 /* #define CONFIG_GPIO_FLASH_DEBUG */
+
 #undef CDBG
 #ifdef CONFIG_GPIO_FLASH_DEBUG
 #define CDBG(fmt, args...) pr_err(fmt, ##args)
@@ -282,6 +283,7 @@ error:
 		devm_pinctrl_put(flash_led->pinctrl);
 	devm_kfree(&pdev->dev, flash_led);
 	return rc;
+
 }
 
 static int led_gpio_flash_remove(struct platform_device *pdev)
