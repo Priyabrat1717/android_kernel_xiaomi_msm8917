@@ -7650,7 +7650,7 @@
 			};
 
 			focaltech@38 {
-				compatible = "focaltech,ft5436";
+				compatible = "focaltech,fts";
 				reg = <0x38>;
 				interrupt-parent = <0x1b>;
 				interrupts = <0x41 0x2>;
@@ -7660,7 +7660,7 @@
 				pinctrl-0 = <0xdf 0xe0>;
 				pinctrl-1 = <0xe2 0xe3>;
 				pinctrl-2 = <0xe5>;
-				focaltech,name = "ft5436";
+				focaltech,name = "fts_ts";
 				focaltech,reset-gpio = <0x1b 0x40 0x0>;
 				focaltech,irq-gpio = <0x1b 0x41 0x2>;
 				focaltech,display-coords = <0x0 0x0 0x2d0 0x500>;
