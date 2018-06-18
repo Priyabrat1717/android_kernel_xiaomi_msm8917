@@ -1,5 +1,4 @@
 /* Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
- * Copyright (C) 2018 XiaoMi, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -32,7 +31,7 @@
 #include "mdss_panel.h"
 #include "mdss_mdp.h"
 
-#define STATUS_CHECK_INTERVAL_MS 500
+#define STATUS_CHECK_INTERVAL_MS 5000
 #define STATUS_CHECK_INTERVAL_MIN_MS 50
 #define DSI_STATUS_CHECK_INIT -1
 #define DSI_STATUS_CHECK_DISABLE 1
@@ -89,7 +88,6 @@ irqreturn_t hw_vsync_handler(int irq, void *data)
 		pr_err("%s: DSI ctrl not available\n", __func__);
 		return IRQ_HANDLED;
 	}
-
 
 	if (pstatus_data)
 		mod_delayed_work(system_wq, &pstatus_data->check_status,
