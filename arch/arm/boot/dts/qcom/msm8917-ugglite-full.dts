@@ -3068,10 +3068,10 @@
 
 				qcom,gpu-pwrlevel@0 {
 					reg = <0x0>;
-					qcom,gpu-freq = <0x23a4c180>;
-					qcom,bus-freq = <0x7>;
-					qcom,bus-min = <0x7>;
-					qcom,bus-max = <0x7>;
+					qcom,gpu-freq = <0x26be3680>;
+					qcom,bus-freq = <0x8>;
+					qcom,bus-min = <0x8>;
+					qcom,bus-max = <0x8>;
 				};
 
 				qcom,gpu-pwrlevel@1 {
@@ -3128,10 +3128,10 @@
 
 					qcom,gpu-pwrlevel@0 {
 						reg = <0x0>;
-						qcom,gpu-freq = <0x23a4c180>;
-						qcom,bus-freq = <0x7>;
-						qcom,bus-min = <0x7>;
-						qcom,bus-max = <0x7>;
+						qcom,gpu-freq = <0x26be3680>;
+						qcom,bus-freq = <0x8>;
+						qcom,bus-min = <0x8>;
+						qcom,bus-max = <0x8>;
 					};
 
 					qcom,gpu-pwrlevel@1 {
@@ -6672,12 +6672,12 @@
 				qcom,mdss-dsi-reset-sequence = <0x1 0xa 0x0 0x1 0x1 0x14>;
 				qcom,mdss-dsi-tx-eot-append;
 				qcom,esd-check-enabled;
-				qcom,mdss-dsi-panel-status-command = <0x6010001 0x50001ac>;
+				qcom,mdss-dsi-panel-status-command = <0x6010001 0x50001ac 0x6010001 0x500011d>;
 				qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-				qcom,mdss-dsi-panel-status-read-length = <0x1>;
+				qcom,mdss-dsi-panel-status-read-length = <0x1 0x1>;
 				qcom,mdss-dsi-panel-max-error-count = <0x3>;
-				qcom,mdss-dsi-panel-status-value = <0x0>;
+				qcom,mdss-dsi-panel-status-value = <0x0 0x5>;
 			};
 
 			qcom,mdss_dsi_sc_ili9881c_720p_video {
@@ -7577,8 +7577,8 @@
 				ti,bq2560x,ta-ilim = <0x7d0>;
 				ti,bq2560x,ta-vreg = <0x1130>;
 				ti,bq2560x,ta-ichg = <0x3e8>;
-				ti,bq2560x,precharge-current = <0x100>;
-				ti,bq2560x,termination-current = <0x3c>;
+				ti,bq2560x,precharge-current = <0x78>;
+				ti,bq2560x,termination-current = <0x78>;
 				ti,bq2560x,boost-voltage = <0x1386>;
 				ti,bq2560x,boost-current = <0x4b0>;
 				ti,bq2560x,enable_term;
@@ -7646,7 +7646,7 @@
 				goodix,panel-coords = <0x0 0x4b0 0x0 0x780>;
 				goodix,i2c-pull-up;
 				goodix,dbl_clk_wakeup;
-				goodix,cfg-group0 = <0x4fd20200 0x50a3ccf 0x11ca280f 0x5a460563 0x0 0x24220a15 0x16281487 0x27cd4042 0xb8080f0a 0x5a3391 0x0 0xc4c432 0xc800311e 0x5081e084 0xf281904 0xcd2100b0 0x28009831 0x863b00 0x77480077 0x10386800 0x57554066 0x6f170002 0xd1000000 0x2 0xf28 0x0 0xa5a00 0x46 0x70809 0xa0b0c0d 0xe0f1011 0x18171615 0x14130605 0x4030201 0x12ffffff 0xffff2928 0x2422201f 0x1e0a0806 0x5040200 0xffffff00 0x0 0x0 0x19414110 0x23280600 0x0 0xf46 0x0 0x284b 0x0 0x1 0x114781c 0x1e551200 0x0 0x0 0x0 0x0 0xb201>;
+				goodix,cfg-group0 = <0x52d00200 0x50a3ccf 0x11cf320f 0x5a460564 0x0 0x24330014 0x16281487 0x27cd4042 0xb8080f0a 0x5a3391 0x0 0xc4c432 0xc800311e 0x5082e0e4 0xf281904 0xe2210097 0x2800892e 0x803b00 0x7048006e 0x10386800 0x57554066 0x6f173c02 0x2000000 0x2 0xf28 0x0 0xa5a00 0x46 0x70809 0xa0b0c0d 0xe0f1011 0x18171615 0x14130605 0x4030201 0x12ffffff 0xffff2928 0x2422201f 0x1e0a0806 0x5040200 0xffffff00 0x0 0x0 0x32414100 0x23288600 0x0 0xf46 0x0 0x284b 0x0 0x1 0x114781d 0x231e3e1e 0x1011450 0x50000 0x0 0x0 0xec01>;
 			};
 
 			focaltech@38 {
@@ -8417,7 +8417,6 @@
 					interrupt-names = "kpdpwr", "resin", "resin-bark", "kpdpwr-resin-bark";
 					qcom,pon-dbc-delay = <0x3d09>;
 					qcom,system-reset;
-					qcom,store-hard-reset-reason;
 
 					qcom,pon_1 {
 						qcom,pon-type = <0x0>;
@@ -8805,8 +8804,8 @@
 			vdd-c1-supply = <0xfa>;
 			clocks = <0x10 0x6b2fb034 0x10 0xfbc57bbd>;
 			clock-names = "clk-c1-4", "clk-c1-5";
-			qcom,speed0-bin-v0-c1 = <0x0 0x0 0x39387000 0x1 0x413b3800 0x2 0x4a62f800 0x3 0x53819040 0x4>;
-			qcom,speed1-bin-v0-c1 = <0x0 0x0 0x39387000 0x1 0x413b3800 0x2 0x4a62f800 0x3 0x53819040 0x4 0x59439000 0x5>;
+			qcom,speed0-bin-v0-c1 = <0x0 0x0 0x1dc13000 0x1 0x26e8f000 0x1 0x3010b000 0x1 0x39387000 0x1 0x413b3800 0x2 0x4a62f800 0x3 0x53819040 0x4 0x59439000 0x5>;
+			qcom,speed1-bin-v0-c1 = <0x0 0x0 0x1dc13000 0x1 0x26e8f000 0x1 0x3010b000 0x1 0x39387000 0x1 0x413b3800 0x2 0x4a62f800 0x3 0x53819040 0x4 0x59439000 0x5>;
 			#clock-cells = <0x1>;
 			linux,phandle = <0x3a>;
 			phandle = <0x3a>;
@@ -8816,7 +8815,7 @@
 			compatible = "qcom,msm-cpufreq";
 			clock-names = "cpu0_clk", "cpu1_clk", "cpu2_clk", "cpu3_clk";
 			clocks = <0x3a 0xcf28e63a 0x3a 0xcf28e63a 0x3a 0xcf28e63a 0x3a 0xcf28e63a>;
-			qcom,cpufreq-table = <0xea600 0x10b300 0x130b00 0x1560a8 0x16da00>;
+			qcom,cpufreq-table = <0x79e00 0x9f600 0xc4e00 0xea600 0x10b300 0x130b00 0x1560a8 0x16da00>;
 		};
 
 		usb@78db000 {
@@ -10426,9 +10425,9 @@
 
 	chosen {
 		pureason = <0x40001>;
-		linux,initrd-end = <0x837f560a>;
+		linux,initrd-end = <0x837da992>;
 		linux,initrd-start = <0x83600000>;
-		bootargs = "sched_enable_hmp=1 console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.selinux=permissive buildvariant=userdebug androidboot.emmc=true androidboot.fpsensor=gdx androidboot.product.region=India androidboot.hwcountry=India androidboot.secureboot=1 androidboot.verifiedbootstate=orange androidboot.veritymode=enforcing androidboot.keymaster=1 androidboot.serialno=5448b4e androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_sc_ili9881c_720p_video:1:none:cfg:single_dsi:0x2198:00";
+		bootargs = "sched_enable_hmp=1 ignore_loglevel androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.selinux=permissive buildvariant=userdebug androidboot.emmc=true androidboot.fpsensor=gdx androidboot.product.region=International androidboot.hwcountry=International androidboot.secureboot=1 androidboot.verifiedbootstate=orange androidboot.veritymode=enforcing androidboot.keymaster=1 androidboot.serialno=34c85c41 androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_sc_ili9881c_720p_video:1:none:cfg:single_dsi:0x2198:00";
 	};
 
 	aliases {
