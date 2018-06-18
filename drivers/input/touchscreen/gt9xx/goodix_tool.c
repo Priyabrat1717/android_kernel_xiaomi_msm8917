@@ -409,14 +409,6 @@ ssize_t goodix_tool_write(struct file *filp, const char __user *buff, size_t len
 	return len;
 }
 
-/*******************************************************
-Function:
-    Goodix tool read function.
-Input:
-  standard seq file read function param.
-Output:
-    Return read length.
-********************************************************/
 ssize_t goodix_tool_read(struct file *file, char __user *page, size_t size, loff_t *ppos)
 {
 	s32 ret = 0;
