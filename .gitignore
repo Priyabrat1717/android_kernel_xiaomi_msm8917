@@ -96,6 +96,7 @@ x509.genkey
 
 # Kconfig presets
 all.config
+net/wireguard/
 
 # fetched Android config fragments
 android/configs/android-*.cfg
